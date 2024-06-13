@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import SelectWithImages from './components/CustomDropdown';
 
 function App() {
   const [language, setLanguage] = useState("swedish");
@@ -11,6 +12,16 @@ function App() {
     educationpage: useRef(null),
     examensarbetepage: useRef(null),
     contactmepage: useRef(null),
+  };
+
+  const options = [
+    { label: 'Swedish', image: '/icons/se.svg' },
+    { label: 'English', image: '/icons/gb.svg' },
+  ];
+
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+    console.log('Selected language:', newLanguage); // Optional: for debugging purposes
   };
 
   useEffect(() => {
@@ -87,14 +98,17 @@ function App() {
           </nav>
         </div>
         <div className="selectlanguage">
-          <select
+
+        <SelectWithImages options={options} language={language} onChange={handleLanguageChange}/>
+
+          {/* <select
             name="language"
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
           >
             <option value="swedish">Swedish</option>
             <option value="english">English</option>
-          </select>
+          </select> */}
         </div>
       </header>
       <section

@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the custom dropdown component.
+// -----------------------------------------------------------------------------
+.custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .select-selected {
+    width: 160px;
+    background-color: #e5e5e5;
+    padding: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .select-items {
+    width: 160px;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    z-index: 99;
+  }
+  
+  .select-items div {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .select-items div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .select-items div img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
