@@ -170,6 +170,8 @@ function App() {
         </div>
         <div className="linksdiv">
           <div className="link githubcontainer">
+            <a href="https://github.com/Jeorge01"  target="_blank"></a>
+            <img src="/icons/logo-github.svg" alt="" />
             <h3>Github</h3>
             <p>
               {language === "swedish"
@@ -178,10 +180,14 @@ function App() {
             </p>
           </div>
           <div className="link emailcontainer">
+            <a href="mailto:johannesstenfeldt@gmail.com" target="_blank"></a>
+            <img src="/icons/mail-outline.svg" alt="" />
             <h3>Email</h3>
             <p>{language === "swedish" ? "Maila mig här!" : "Mail me here!"}</p>
           </div>
           <div className="link linkedincontainer">
+            {/* <a href="" target="_blank"></a> */}
+            <img src="/icons/logo-linkedin.svg" alt="" />
             <h3>LinkedIn</h3>
             <p>
               {language === "swedish"
