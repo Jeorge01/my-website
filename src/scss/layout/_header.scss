@@ -55,9 +55,17 @@ header {
     nav {
       display: flex;
       gap: 40px;
+      
+      a {
+        color: #737373;
+
+        &:hover {
+          color: #000;  
+        }
+      }
 
       a.active {
-        color: #929292;
+        color: #000;
       }
     }
   }

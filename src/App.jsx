@@ -58,7 +58,7 @@ function App() {
               duration={500}
               className={activeSection === "aboutmepage" ? "active" : ""}
             >
-              {language === "swedish" ? "Om Mig" : "About me"}
+              {language === "swedish" ? "Om mig" : "About me"}
             </Link>
             <Link
               to="educationpage"
@@ -108,7 +108,7 @@ function App() {
           </div>
         </div>
         <div className="textcontainer">
-          <h1>{language === "swedish" ? "Om Mig" : "About me"}</h1>
+          <h1>{language === "swedish" ? "Om mig" : "About me"}</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
             illum veniam est, temporibus facilis doloribus deleniti repellendus
