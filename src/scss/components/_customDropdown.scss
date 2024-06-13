@@ -23,6 +23,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 150px;
+
+  @include breakpoint("small") {
+    width: 150px;
+  }
+
+  @include breakpoint("medium") {
+    width: 200px;
+  }
+
+  @include breakpoint("large") {
+    width: 200px;
+  }
 
   img.dropdown-icon {
     width: 20px;
@@ -40,6 +53,19 @@
 .select-selected div {
   display: flex;
   align-items: center;
+  font-size: 0.825rem;
+
+  @include breakpoint("small") {
+    font-size: 0.825rem;
+  }
+
+  @include breakpoint("medium") {
+    font-size: 0.825rem;
+  }
+
+  @include breakpoint("large") {
+    font-size: 1rem;
+  }
 }
 
 .open {
@@ -47,6 +73,7 @@
 }
 
 .select-items {
+  display: flex;
   transform: translateY(-44px);
   width: 200px;
   height: 44px;
@@ -60,6 +87,19 @@
   z-index: 99;
   border-radius: 0 0 6px 6px;
   transition: transform 0.3s ease;
+  width: 150px;
+
+  @include breakpoint("small") {
+    width: 150px;
+  }
+
+  @include breakpoint("medium") {
+    width: 200px;
+  }
+
+  @include breakpoint("large") {
+    width: 200px;
+  }
 
   &.open {
     transform: translateY(0px);
@@ -72,6 +112,18 @@
   transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
+
+  @include breakpoint("small") {
+    font-size: 0.825rem;
+  }
+
+  @include breakpoint("medium") {
+    font-size: 0.825rem;
+  }
+
+  @include breakpoint("large") {
+    font-size: 1rem;
+  }
 }
 
 .select-items div img {

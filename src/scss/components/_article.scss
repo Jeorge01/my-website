@@ -6,6 +6,7 @@ section.article {
 
   padding-top: 40px;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
 
@@ -79,10 +80,25 @@ section.article {
     div.imagecontainer {
       // border: 2px solid blue;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      width: 450px;
-      height: 80%;
+      width: 85%;
+      height: 250px;
       overflow: hidden;
       border-radius: 8px;
+
+      @include breakpoint("small") {
+        width: 85%;
+        height: 250px;
+      }
+
+      @include breakpoint("medium") {
+        width: 85%;
+        height: 350px;
+      }
+
+      @include breakpoint("large") {
+        width: 450px;
+        height: 80%;
+      }
 
       img {
         object-fit: cover;
@@ -140,14 +156,28 @@ section.article {
       align-items: center;
     }
 
-    width: 40%;
     div.imagecontainer {
       //   border: 2px solid blue;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      width: 450px;
-      height: 80%;
+      width: 85%;
+        height: 250px;
       overflow: hidden;
       border-radius: 8px;
+
+      @include breakpoint("small") {
+        width: 85%;
+        height: 250px;
+      }
+
+      @include breakpoint("medium") {
+        width: 85%;
+        height: 350px;
+      }
+
+      @include breakpoint("large") {
+        width: 450px;
+        height: 80%;
+      }
 
       img {
         object-fit: cover;
@@ -165,19 +195,22 @@ section.article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px;
+    padding: 7.5%;
     width: 100%;
 
     @include breakpoint("small") {
       width: 100%;
+      padding: 7.5%;
     }
 
     @include breakpoint("medium") {
       width: 100%;
+      padding: 7.5%;
     }
 
     @include breakpoint("large") {
       width: 60%;
+      padding: 80px;
     }
   }
 }
@@ -188,7 +221,19 @@ section.contactmepage {
 
   div.textcontainer {
     width: 100%;
-    padding: 120px 80px 0 80px;
+    padding: 20px;
+
+    @include breakpoint("small") {
+      padding: 20px;
+    }
+
+    @include breakpoint("medium") {
+      padding: 20px;
+    }
+
+    @include breakpoint("large") {
+      padding: 120px 80px 0 80px;
+    }
   }
 
   div.linksdiv {
@@ -202,7 +247,6 @@ section.contactmepage {
     padding-bottom: 100px;
 
     @include breakpoint("small") {
-      
     }
 
     @include breakpoint("medium") {

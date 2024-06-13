@@ -60,6 +60,7 @@ function App() {
       <header>
         <div className="myname">
           <h3>Johannes Stenfeldt</h3>
+          <h2>JS</h2>
         </div>
         <div className="navdiv">
           <nav>
