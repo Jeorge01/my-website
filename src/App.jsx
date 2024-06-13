@@ -197,7 +197,7 @@ function App() {
             <a href="mailto:johannesstenfeldt@gmail.com" target="_blank"></a>
             <img src="/icons/mail-outline.svg" alt="" />
             <h3>Email</h3>
-            <p>{language === "swedish" ? "Maila mig här!" : "Mail me here!"}</p>
+            <p>johannesstenfeldt@gmail.com</p>
           </div>
           <div className="link linkedincontainer">
             {/* <a href="" target="_blank"></a> */}
@@ -212,7 +212,6 @@ function App() {
         </div>
         <footer>
           <p>&copy; Jeorge01 {currentYear}</p>
-          <p>johannesstenfeldt@gmail.com</p>
         </footer>
       </section>
     </>

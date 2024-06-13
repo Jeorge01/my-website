@@ -2,39 +2,74 @@
 // This file contains all styles related to the custom dropdown component.
 // -----------------------------------------------------------------------------
 .custom-select {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .select-selected {
-    width: 160px;
-    background-color: #e5e5e5;
-    padding: 8px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .select-items {
-    width: 160px;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    z-index: 99;
-  }
-  
-  .select-items div {
-    padding: 8px;
-    cursor: pointer;
-  }
-  
-  .select-items div:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .select-items div img {
+  position: relative;
+  display: inline-block;
+}
+
+.select-selected {
+  width: 200px;
+  height: 44px;
+  background: linear-gradient(
+    45deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgb(246, 246, 246) 100%
+  );
+  padding: 8px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img.dropdown-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
     margin-right: 8px;
+    transition: transform 0.3s ease;
   }
-  
+
+  img.open {
+    transform: rotate(180deg);
+  }
+}
+
+.open {
+  border-radius: 6px 6px 0 0;
+}
+
+.select-items {
+  transform: translateY(-44px);
+  width: 200px;
+  height: 44px;
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgb(246, 246, 246) 100%
+  );
+  border: 1px solid #cdcdcd;
+  z-index: 99;
+  border-radius: 0 0 6px 6px;
+  transition: transform 0.3s ease;
+
+  &.open {
+    transform: translateY(0px);
+  }
+}
+
+.select-items div {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-items div img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
