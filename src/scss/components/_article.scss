@@ -32,6 +32,20 @@ section.article {
         border-radius: 8px;
       }
     }
+
+    div.imagecontainer2 {
+      width: 450px;
+      height: 80%;
+      overflow: hidden;
+      border-radius: 8px;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
   }
 
   div.imagesection2 {
@@ -148,5 +162,6 @@ section.contactmepage {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
   }
 }

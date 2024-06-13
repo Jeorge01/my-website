@@ -146,8 +146,8 @@ function App() {
         className="article examensarbetepage"
       >
         <div className="imagesection">
-          <div className="imagecontainer">
-            <img src="/images/examensarbete.png" alt="Bild på Johannes" />
+          <div className="imagecontainer2">
+            <img src="/images/application-on-phone.png" alt="Bild på Johannes" />
           </div>
         </div>
         <div className="textcontainer">
@@ -198,6 +198,7 @@ function App() {
         </div>
         <footer>
           <p>&copy; Jeorge01 {currentYear}</p>
+          <p>johannesstenfeldt@gmail.com</p>
         </footer>
       </section>
     </>
