@@ -68,6 +68,7 @@ section.article {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-left: 0;
     }
 
     @include breakpoint("large") {
@@ -75,6 +76,7 @@ section.article {
       display: flex;
       justify-content: right;
       align-items: center;
+      padding-left: 5%;
     }
 
     div.imagecontainer {
@@ -147,6 +149,7 @@ section.article {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-right: 0;
     }
 
     @include breakpoint("large") {
@@ -154,6 +157,7 @@ section.article {
       display: flex;
       justify-content: left;
       align-items: center;
+      padding-right: 5%;
     }
 
     div.imagecontainer {
@@ -255,6 +259,7 @@ section.contactmepage {
 
     @include breakpoint("large") {
       flex-direction: row;
+      padding: 40px;
     }
 
     div.link {
