@@ -141,7 +141,7 @@ function App() {
               ? `Mitt namn är Johannes. Jag är ${myAge} år gammal och har utbildat mig
             till webbutvecklare. Jag har ett stort och växande intresse för
             webbutveckling både inom backend och frontend och kodar även på egen
-            tid. Andra saker som betyder mycket för mig är sport som Volleyboll,
+            tid. Andra saker som betyder mycket för mig är sporter som Volleyboll,
             Fotboll, Padel och Tennis men även olika typer av datorspel och
             brädspel. `
               : `My name is Johannes. I am ${myAge} years old and I have studied to become a web developer. 

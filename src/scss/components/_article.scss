@@ -225,9 +225,10 @@ section.article {
       width: 100%;
       margin-top: 40px;
       padding: 20px;
-      // width: 100%;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: left;
+      align-items: baseline;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       background: linear-gradient(
         45deg,
@@ -236,6 +237,22 @@ section.article {
       );
       border-radius: 6px;
       gap: 5%;
+
+      @include breakpoint("small") {
+        justify-content: left;
+        align-items: baseline;
+        flex-direction: column;
+      }
+  
+      @include breakpoint("medium") {
+        align-items: center;
+        flex-direction: row;
+      }
+  
+      @include breakpoint("large") {
+        align-items: center;
+        flex-direction: row;
+      }
       ul {
         margin: 0;
         padding: 0;
@@ -247,8 +264,22 @@ section.article {
         li {
           width: 220px;
           list-style: inside;
-          // font-size: 0.825rem;
-          font-size: 1rem;
+          font-size: 0.825rem;
+
+          @include breakpoint("small") {
+            width: 220px;
+            font-size: 0.825rem;
+          }
+      
+          @include breakpoint("medium") {
+            width: 220px;
+            font-size: 1rem;
+          }
+      
+          @include breakpoint("large") {
+            width: 220px;
+            font-size: 1rem;
+          }
         }
       }
       
