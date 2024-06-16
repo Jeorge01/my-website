@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import SelectWithImages from './components/CustomDropdown';
+import SelectWithImages from "./components/CustomDropdown";
 
 function App() {
   const [language, setLanguage] = useState("swedish");
@@ -15,13 +15,31 @@ function App() {
   };
 
   const options = [
-    { label: 'Swedish', image: '/icons/se.svg' },
-    { label: 'English', image: '/icons/gb.svg' },
+    { label: "Swedish", image: "/icons/se.svg" },
+    { label: "English", image: "/icons/gb.svg" },
   ];
+
+  const myAge = (() => {
+    const today = new Date();
+    const birthdate = "2001-10-24";
+    const birthDate = new Date(birthdate);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+
+    // Check if the birthday has occurred this year
+    if (
+      monthDifference < 0 ||
+      (monthDifference === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  })();
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
-    console.log('Selected language:', newLanguage); // Optional: for debugging purposes
+    console.log("Selected language:", newLanguage); // Optional: for debugging purposes
   };
 
   useEffect(() => {
@@ -99,17 +117,11 @@ function App() {
           </nav>
         </div>
         <div className="selectlanguage">
-
-        <SelectWithImages options={options} language={language} onChange={handleLanguageChange}/>
-
-          {/* <select
-            name="language"
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
-          >
-            <option value="swedish">Swedish</option>
-            <option value="english">English</option>
-          </select> */}
+          <SelectWithImages
+            options={options}
+            language={language}
+            onChange={handleLanguageChange}
+          />
         </div>
       </header>
       <section
@@ -125,10 +137,17 @@ function App() {
         <div className="textcontainer">
           <h1>{language === "swedish" ? "Om mig" : "About me"}</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-            illum veniam est, temporibus facilis doloribus deleniti repellendus
-            laboriosam facere placeat praesentium assumenda cum excepturi
-            quisquam et recusandae ex sed! Repellat?
+            {language === "swedish"
+              ? `Mitt namn är Johannes. Jag är ${myAge} år gammal och har utbildat mig
+            till webbutvecklare. Jag har ett stort och växande intresse för
+            webbutveckling både inom backend och frontend och kodar även på egen
+            tid. Andra saker som betyder mycket för mig är sport som Volleyboll,
+            Fotboll, Padel och Tennis men även olika typer av datorspel och
+            brädspel. `
+              : `My name is Johannes. I am ${myAge} years old and I have trained as a web developer. 
+              I have a strong and growing interest in web development, both in backend and frontend, 
+              and I also code in my spare time. Other things that mean a lot to me are sports like volleyball, 
+              football, padel, and tennis, as well as various types of computer and board games.`}
           </p>
         </div>
       </section>
@@ -162,7 +181,10 @@ function App() {
       >
         <div className="imagesection">
           <div className="imagecontainer2">
-            <img src="/images/application-on-phone.png" alt="Bild på Johannes" />
+            <img
+              src="/images/application-on-phone.png"
+              alt="Bild på Johannes"
+            />
           </div>
         </div>
         <div className="textcontainer">
@@ -185,7 +207,7 @@ function App() {
         </div>
         <div className="linksdiv">
           <div className="link githubcontainer">
-            <a href="https://github.com/Jeorge01"  target="_blank"></a>
+            <a href="https://github.com/Jeorge01" target="_blank"></a>
             <img src="/icons/logo-github.svg" alt="" />
             <h3>Github</h3>
             <p>

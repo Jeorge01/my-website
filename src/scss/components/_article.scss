@@ -216,6 +216,10 @@ section.article {
       width: 60%;
       padding: 80px;
     }
+
+    p {
+      line-height: 30px;
+    }
   }
 }
 
@@ -259,7 +263,7 @@ section.contactmepage {
 
     @include breakpoint("large") {
       flex-direction: row;
-      padding: 40px;
+      padding: 0 40px 100px 40px;
     }
 
     div.link {
