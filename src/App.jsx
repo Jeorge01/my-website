@@ -144,10 +144,10 @@ function App() {
             tid. Andra saker som betyder mycket för mig är sport som Volleyboll,
             Fotboll, Padel och Tennis men även olika typer av datorspel och
             brädspel. `
-              : `My name is Johannes. I am ${myAge} years old and I have trained as a web developer. 
-              I have a strong and growing interest in web development, both in backend and frontend, 
-              and I also code in my spare time. Other things that mean a lot to me are sports like volleyball, 
-              football, padel, and tennis, as well as various types of computer and board games.`}
+              : `My name is Johannes. I am ${myAge} years old and I have studied to become a web developer. 
+            I have a strong and growing interest in web development, both in backend and frontend, 
+            and I also code in my spare time. Other things that mean a lot to me are sports like volleyball, 
+            football, padel, and tennis, as well as various types of computer and board games.`}
           </p>
         </div>
       </section>
@@ -159,11 +159,53 @@ function App() {
         <div className="textcontainer">
           <h1>{language === "swedish" ? "Utbildning" : "Education"}</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-            illum veniam est, temporibus facilis doloribus deleniti repellendus
-            laboriosam facere placeat praesentium assumenda cum excepturi
-            quisquam et recusandae ex sed! Repellat?
+            {language === "swedish"
+              ? `Jag gick en tvåårig utbildning som tog plats på Glimåkra folkhögskola. 
+            Terminerna var uppdelade i moduler där vi inriktade
+            oss inom olika områden och de anvsluades med ett case där vår uppgift var att
+            bygga ett projekt med de tekniker som vi lärt oss. Kursen bestod av tålv
+            moduler.`
+              : `I've studied for two years to become a web developer at Glimåkra Folkhögskola. 
+            The course were divided into modules where we focused on different areas, 
+            and at the end of each module we had a case where we had to build a project using the techniques we had learned. 
+            The course consisted of twelve modules.`}
           </p>
+          <div className="modules">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>
+                {language === "swedish"
+                  ? "Javascript API:er"
+                  : "Javascript APIs"}
+              </li>
+              <li>
+                {language === "swedish"
+                  ? "Hosting och wordpress"
+                  : "Hosting and wordpress"}
+              </li>
+              <li>Node.js</li>
+            </ul>
+            <ul>
+              <li>
+                {language === "swedish"
+                  ? "Backend PHP och SQL"
+                  : "Backend PHP and SQL"}
+              </li>
+              <li>React</li>
+              <li>Webbsockets</li>
+              <li>Fullstack PHP</li>
+              <li>
+                {language === "swedish"
+                  ? "Wordpress gruppprojekt"
+                  : "Wordpress grouproject"}
+              </li>
+              <li>
+                {language === "swedish" ? "Examensarbete" : "Final project"}
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="imagesection2">
           <div className="imagecontainer">
