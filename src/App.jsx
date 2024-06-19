@@ -232,10 +232,13 @@ function App() {
         <div className="textcontainer">
           <h1>{language === "swedish" ? "Examensarbete" : "Final project"}</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-            illum veniam est, temporibus facilis doloribus deleniti repellendus
-            laboriosam facere placeat praesentium assumenda cum excepturi
-            quisquam et recusandae ex sed! Repellat?
+            {language === "swedish"
+              ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett API till ÖMC som ska hjälpa intruktörer att se och anöka om att hålla i kurser. 
+            Vi använder oss av Power Automate för att fetcha information för en outlook kalender som sedan visas på vår application. 
+            Instruktörer kan därefter välja och ansöka om att hålla i kurser som sedan personal på ömc kan bekräfta eller neka som sedan fetchas tillbaka till kalendern.`
+              : `I made my final project together with my friend Elliot Borgkvist and we have built an API to ÖMC which is going to help users to request be to instructors on available courses.
+            We are using Power Automate to fetch information from a outlook calender which we are using and showing in our application. 
+            The users are able to view, choose and request to be instructors on the available courses which admins are able to accept or deny which will be fetched back to the kalender.`}
           </p>
         </div>
       </section>
@@ -254,7 +257,7 @@ function App() {
             <h3>Github</h3>
             <p>
               {language === "swedish"
-                ? "Har är länk till mig Github!"
+                ? "Har är länk till min Github!"
                 : "Here is a link to my Github!"}
             </p>
           </div>
