@@ -98,7 +98,7 @@ section.article {
       }
 
       @include breakpoint("large") {
-        width: 450px;
+        width: 100%;
         height: 80%;
       }
 
@@ -111,8 +111,8 @@ section.article {
     }
 
     div.imagecontainer2 {
-      width: 450px;
-      height: 80%;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       border-radius: 8px;
 
@@ -179,7 +179,7 @@ section.article {
       }
 
       @include breakpoint("large") {
-        width: 450px;
+        width: 100%;
         height: 80%;
       }
 
