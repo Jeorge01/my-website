@@ -268,7 +268,7 @@ function App() {
             <p>johannesstenfeldt@gmail.com</p>
           </div>
           <div className="link linkedincontainer">
-            {/* <a href="" target="_blank"></a> */}
+            <a href="https://www.linkedin.com/in/johannes-stenfeldt-976714314" target="_blank"></a>
             <img src="/icons/logo-linkedin.svg" alt="" />
             <h3>LinkedIn</h3>
             <p>
