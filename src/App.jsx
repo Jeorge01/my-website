@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import SelectWithImages from "./components/CustomDropdown";
 
 function App() {
-  const [language, setLanguage] = useState("swedish");
+  const [language, setLanguage] = useState("english");
   const [activeSection, setActiveSection] = useState("");
   const currentYear = new Date().getFullYear();
 
@@ -233,11 +233,11 @@ function App() {
           <h1>{language === "swedish" ? "Examensarbete" : "Final project"}</h1>
           <p>
             {language === "swedish"
-              ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett API till ÖMC som ska hjälpa intruktörer att se och anöka om att hålla i kurser. 
-            Vi använder oss av Power Automate för att fetcha information för en outlook kalender som sedan visas på vår application. 
+              ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett api till ÖMC som ska hjälpa intruktörer att se och anöka om att hålla i kurser. 
+            Vi använder oss av Power Automate för att fetcha information för en outlook kalender, så när ett event skapas så visas det på vårt api som är byggt på Mernstack (Mongodb, express, react and node.js). 
             Instruktörer kan därefter välja och ansöka om att hålla i kurser som sedan personal på ömc kan bekräfta eller neka som sedan fetchas tillbaka till kalendern.`
-              : `I made my final project together with my friend Elliot Borgkvist and we have built an API to ÖMC which is going to help users to request be to instructors on available courses.
-            We are using Power Automate to fetch information from a outlook calender which we are using and showing in our application. 
+              : `I made my final project together with my friend Elliot Borgkvist and we have built an api to ÖMC which is going to help users to request to be instructors on available courses.
+            We are using Power Automate to fetch information from a outlook calender, so when an event is created it will be displayed on our api which is built on Mernstack (Mongodb, express, react and node.js). 
             The users are able to view, choose and request to be instructors on the available courses which admins are able to accept or deny which will be fetched back to the kalender.`}
           </p>
         </div>
