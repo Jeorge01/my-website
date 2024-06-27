@@ -26,6 +26,16 @@ section.article {
     display: flex;
     flex-direction: row;
     height: 100vh;
+    padding: 0;
+  }
+
+  @include breakpoint("larger") {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0 8%;
+    gap: 8%;
+    overflow: hidden;
   }
 
   &.educationpage {
@@ -375,15 +385,5 @@ section.contactmepage {
         font-size: 1rem;
       }
     }
-  }
-
-  footer {
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
   }
 }
