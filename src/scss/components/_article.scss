@@ -4,7 +4,7 @@
 section.article {
   // border: 5px solid red;
 
-  padding-top: 40px;
+  padding: 40px 0 0 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -26,14 +26,14 @@ section.article {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    padding: 0;
+    padding: 40px 0 0 0;
   }
 
   @include breakpoint("larger") {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    padding: 0 8%;
+    padding: 40px 8% 0 8%;
     gap: 8%;
     overflow: hidden;
   }
