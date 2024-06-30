@@ -228,7 +228,23 @@ section.article {
     }
 
     p {
-      line-height: 30px;
+      font-size: 0.825rem;
+      line-height: 20px;
+      
+      @include breakpoint("small") {
+        font-size: 0.825rem;
+        line-height: 20px;
+      }
+  
+      @include breakpoint("medium") {
+        font-size: 1rem;
+        line-height: 25px;
+      }
+  
+      @include breakpoint("large") {
+        font-size: 1.25rem;
+        line-height: 30px;
+      }
     }
 
     div.modules {
