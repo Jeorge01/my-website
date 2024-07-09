@@ -144,7 +144,7 @@ function App() {
                         {language === "swedish"
                             ? `Jag gick en tvåårig utbildning som tog plats på Glimåkra folkhögskola. 
             Terminerna var uppdelade i moduler där vi inriktade
-            oss inom olika områden och de anvsluades med ett case där vår uppgift var att
+            oss inom olika områden och de avslutades med ett case där vår uppgift var att
             bygga ett projekt med de tekniker som vi lärt oss. Kursen bestod av tålv
             moduler.`
                             : `I've studied for two years to become a web developer at Glimåkra Folkhögskola. 
@@ -187,7 +187,7 @@ function App() {
                     <h1>{language === "swedish" ? "Examensarbete" : "Final project"}</h1>
                     <p>
                         {language === "swedish"
-                            ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett api till ÖMC som ska hjälpa intruktörer att se och anöka om att hålla i kurser. 
+                            ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett api till ÖMC som ska hjälpa intruktörer att se och ansöka om att hålla i kurser. 
             Vi använder oss av Power Automate för att fetcha information för en outlook kalender, så när ett event skapas så visas det på vårt api som är byggt på Mernstack (Mongodb, express, react and node.js). 
             Instruktörer kan därefter välja och ansöka om att hålla i kurser som sedan personal på ömc kan bekräfta eller neka som sedan fetchas tillbaka till kalendern.`
                             : `I made my final project together with my friend Elliot Borgkvist and we have built an api to ÖMC which is going to help users to request to be instructors on available courses.
