@@ -327,6 +327,7 @@ section.article {
 section.contactmepage {
     display: flex;
     flex-direction: column;
+    gap: 0;
 
     div.textcontainer {
         width: 100%;
