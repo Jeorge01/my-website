@@ -71,7 +71,7 @@ function App() {
         <>
             <header>
                 <div className="myname">
-                    <img src="/icons/webblogofavicon.svg" alt="logo" />
+                    <img src="/icons/webblogosolid.svg" alt="logo" />
                     <h2></h2>
                 </div>
                 <div className="navdiv">
