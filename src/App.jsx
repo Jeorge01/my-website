@@ -71,7 +71,7 @@ function App() {
         <>
             <header>
                 <div className="myname">
-                    <h3>Johannes Stenfeldt</h3>
+                    <img src="/icons/webblogotransparent.svg" alt="logo" />
                     <h2></h2>
                 </div>
                 <div className="navdiv">

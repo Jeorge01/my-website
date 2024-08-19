@@ -31,8 +31,10 @@ header {
 
   div.myname {
     display: flex;
+    align-items: center;
     justify-content: left;
     width: 60%;
+    height: 100%;
 
     @include breakpoint("small") {
       width: 50%;
@@ -60,6 +62,24 @@ header {
   
       @include breakpoint("large") {
         display: block;
+      }
+    }
+
+    img {
+      display: none;
+      height: 80%;
+      
+      @include breakpoint("small") {
+        display: none;
+      }
+  
+      @include breakpoint("medium") {
+        display: block;
+      }
+  
+      @include breakpoint("large") {
+        display: block;
+        
       }
     }
 
