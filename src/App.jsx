@@ -71,7 +71,7 @@ function App() {
         <>
             <header>
                 <div className="myname">
-                    <img src="/icons/webblogosolid.svg" alt="logo" />
+                    <img src="/icons/webblogosolid.svg" alt="logo" draggable="false" />
                     <h2></h2>
                 </div>
                 <div className="navdiv">
@@ -114,6 +114,10 @@ function App() {
                     <SelectWithImages options={options} language={language} onChange={handleLanguageChange} />
                 </div>
             </header>
+            <section id="firstpage" className="firstpage">
+                <video autoPlay loop muted src="/videos/testvideo.mp4"></video>
+                <h1>Johannes Stenfeldt</h1>
+            </section>
             <section id="aboutmepage" ref={sectionRefs.aboutmepage} className="article aboutmepage">
                 <div className="imagesection">
                     <div className="imagecontainer">
