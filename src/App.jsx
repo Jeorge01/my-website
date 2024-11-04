@@ -8,8 +8,6 @@ function App() {
   const [firstPageActive, setFirstPageActive] = useState(false);
   const currentYear = new Date().getFullYear();
 
-  console.log(activeSection);
-  console.log("firstpageactive?", firstPageActive);
   const sectionRefs = {
     firstpage: useRef(null),
     aboutmepage: useRef(null),
