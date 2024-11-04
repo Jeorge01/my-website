@@ -15,10 +15,28 @@ section.firstpage {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
     color: white;
     font-size: 7rem;
-    white-space: nowrap;
+    white-space: wrap;
+
+    @include breakpoint("small") {
+      white-space: wrap;
+      transform: translate(-50%, -75%);
+      font-size: 4rem;
+    }
+
+    @include breakpoint("medium") {
+      white-space: wrap;
+      transform: translate(-50%, -75%);
+      font-size: 5rem;
+    }
+
+    @include breakpoint("large") {
+      white-space: nowrap;
+      transform: translate(-50%, -85%);
+      font-size: 6rem;
+    }
   }
   div {
     top: 0;
