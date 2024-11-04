@@ -81,6 +81,27 @@ function App() {
     };
   }, [sectionRefs]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const parallaxHeading = document.querySelector(".parallax-heading");
+
+      // Set the speed factor (adjust to control how slow the parallax effect is)
+      const parallaxSpeed = 0.35;
+
+      // Apply the parallax translation based on scroll position
+      if (parallaxHeading) {
+        parallaxHeading.style.transform = `translate(-50%, calc(-85% + ${scrollPosition * parallaxSpeed}px))`;
+      }
+    };
+
+    // Add the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <header className={activeSection === "firstpage" ? "onFirstpage" : ""}>
@@ -155,7 +176,7 @@ function App() {
         <div>
           <video autoPlay loop muted src="/videos/testvideo.mp4"></video>
         </div>
-        <h1>Johannes Stenfeldt</h1>
+        <h1 className="parallax-heading">Johannes Stenfeldt</h1>
       </section>
       <section
         id="aboutmepage"
