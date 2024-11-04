@@ -66,30 +66,23 @@ header {
     }
     a {
       cursor: pointer;
+      position: relative;
       height: 80%;
       width: 64px;
     }
     img.blacklogo {
-      display: none;
       height: 100%;
       width: 100%;
-      
-      @include breakpoint("small") {
-        display: none;
-      }
-  
-      @include breakpoint("medium") {
-        display: block;
-      }
-  
-      @include breakpoint("large") {
-        display: block;
-        
-      }
     }
 
     img.whitelogo {
-      display: none;
+      opacity: 0%;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      top: 0;
+      left: 0;
     }
 
     h2 {
@@ -177,11 +170,9 @@ header.onFirstpage {
   div.myname {
     a {
       img.whitelogo {
-        display: flex;
+        opacity: 100%;
       }
-      img.blacklogo {
-        display: none;
-      }
+      
     }
   }
 
