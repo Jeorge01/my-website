@@ -4,10 +4,12 @@ import SelectWithImages from "./components/CustomDropdown";
 
 function App() {
   const [language, setLanguage] = useState("english");
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("firstpage");
+  const [firstPageActive, setFirstPageActive] = useState(false);
   const currentYear = new Date().getFullYear();
 
   console.log(activeSection);
+  console.log("firstpageactive?", firstPageActive);
   const sectionRefs = {
     firstpage: useRef(null),
     aboutmepage: useRef(null),
@@ -47,64 +49,84 @@ function App() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "0px 0px -20% 0px", // Start intersection when 50% of the next section is visible
-      threshold: 0.8, // Section only activates when 80% of it is visible
+      rootMargin: "0px 0px -50% 0px",
+      // Here we set a generic threshold, but we can adjust it within the observer callback
+      threshold: [0.0005, 0.3], // You can keep both thresholds in the array
     };
-
+  
     const observerCallback = (entries) => {
-      // Sort entries by visibility, with the most visible section first
-      const visibleSections = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      // Set the active section to the one with the highest visibility
-      if (visibleSections.length > 0) {
-        setActiveSection(visibleSections[0].target.id);
-      }
+      entries.forEach((entry) => {
+        const sectionId = entry.target.id;
+  
+        // Handle the firstpage visibility
+        if (sectionId === "firstpage") {
+          const isFirstPageVisible = entry.isIntersecting;
+          setFirstPageActive(isFirstPageVisible);
+  
+          if (isFirstPageVisible) {
+            setActiveSection("firstpage");
+          }
+        } else if (!firstPageActive) {
+          // If firstpage is not active, check other sections
+          const visibleSections = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+  
+          // Adjust the active section based on intersection ratio for the other sections
+          if (visibleSections.length > 0 && entry.intersectionRatio >= 0.3) {
+            setActiveSection(visibleSections[0].target.id);
+          }
+        }
+      });
     };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-
-    // Observe each section
+  
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+  
+    // Observe all sections
     Object.values(sectionRefs).forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
-
+  
     // Cleanup observer on unmount
     return () => {
       Object.values(sectionRefs).forEach((ref) => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
-  }, [sectionRefs]);
+  }, [sectionRefs, firstPageActive]);
+  
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const parallaxHeading = document.querySelector(".parallax-heading");
 
-      // Set the speed factor (adjust to control how slow the parallax effect is)
       const parallaxSpeed = 0.35;
 
-      // Apply the parallax translation based on scroll position
       if (parallaxHeading) {
         parallaxHeading.style.transform = `translate(-50%, calc(-85% + ${scrollPosition * parallaxSpeed}px))`;
       }
+
+      // Determine the current active section based on scroll position
+      Object.keys(sectionRefs).forEach((sectionKey) => {
+        const section = sectionRefs[sectionKey].current;
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          // If the section is visible in the viewport
+          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            setActiveSection(sectionKey);
+          }
+        }
+      });
     };
 
-    // Add the scroll event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sectionRefs]);
 
   return (
     <>
-      <header className={activeSection === "firstpage" ? "onFirstpage" : ""}>
+      <header className={firstPageActive ? "onFirstpage" : ""}>
         <div className="myname">
           <Link
             to="firstpage"
