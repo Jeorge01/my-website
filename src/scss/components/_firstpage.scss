@@ -53,7 +53,11 @@ section.firstpage {
     filter: brightness(75%);
 
     video {
+      pointer-events: none;
       will-change: transform;
+      backface-visibility: hidden;
+      user-select: none; /* Prevents accidental text/image selection */
+      -webkit-user-drag: none; /* For Safari/Chrome */
       z-index: -1;
       position: absolute;
       top: 0;
