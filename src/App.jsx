@@ -50,26 +50,29 @@ function App() {
       rootMargin: "0px 0px -20% 0px", // Start intersection when 50% of the next section is visible
       threshold: 0.8, // Section only activates when 80% of it is visible
     };
-  
+
     const observerCallback = (entries) => {
       // Sort entries by visibility, with the most visible section first
       const visibleSections = entries
-        .filter(entry => entry.isIntersecting)
+        .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-  
+
       // Set the active section to the one with the highest visibility
       if (visibleSections.length > 0) {
         setActiveSection(visibleSections[0].target.id);
       }
     };
-  
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-  
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
     // Observe each section
     Object.values(sectionRefs).forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
-  
+
     // Cleanup observer on unmount
     return () => {
       Object.values(sectionRefs).forEach((ref) => {
@@ -88,8 +91,18 @@ function App() {
             duration={500}
             className={activeSection === "firstpage" ? "active" : ""}
           >
-            <img src="/icons/webblogosolidblack.svg" className="blacklogo" alt="logo" draggable="false" />
-            <img src="/icons/webblogosolidwhite.svg" className="whitelogo" alt="logo" draggable="false" />
+            <img
+              src="/icons/webblogosolidblack.svg"
+              className="blacklogo"
+              alt="logo"
+              draggable="false"
+            />
+            <img
+              src="/icons/webblogosolidwhite.svg"
+              className="whitelogo"
+              alt="logo"
+              draggable="false"
+            />
           </Link>
 
           <h2></h2>
@@ -139,7 +152,9 @@ function App() {
         </div>
       </header>
       <section id="firstpage" ref={sectionRefs.firstpage} className="firstpage">
-        <video autoPlay loop muted src="/videos/testvideo.mp4"></video>
+        <div>
+          <video autoPlay loop muted src="/videos/testvideo.mp4"></video>
+        </div>
         <h1>Johannes Stenfeldt</h1>
       </section>
       <section
