@@ -15,7 +15,7 @@
     rgb(246, 246, 246) 100%
   );
   padding: 8px;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
   cursor: pointer;
 
   border-radius: 6px;
@@ -83,7 +83,7 @@
     rgba(240, 240, 240, 1) 0%,
     rgb(246, 246, 246) 100%
   );
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
   z-index: 99;
   border-radius: 0 0 6px 6px;
   transition: transform 0.3s ease;
