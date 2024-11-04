@@ -169,5 +169,13 @@ header.onFirstpage {
   backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(0);
   transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+
+  div {
+    a {
+      img {
+        background-image: url("/public/icons/webblogosolidwhite.svg") !important;
+      }
+    }
+  }
   
 }

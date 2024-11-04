@@ -88,7 +88,8 @@ function App() {
             duration={500}
             className={activeSection === "firstpage" ? "active" : ""}
           >
-            <img src="/icons/webblogosolid.svg" alt="logo" draggable="false" />
+            <img src="/icons/webblogosolidblack.svg" className="blacklogo" alt="logo" draggable="false" />
+            <img src="/icons/webblogosolidwhite.svg" className="whitelogo" alt="logo" draggable="false" />
           </Link>
 
           <h2></h2>
