@@ -53,6 +53,7 @@ section.firstpage {
     filter: brightness(75%);
 
     video {
+      will-change: transform;
       z-index: -1;
       position: absolute;
       top: 0;

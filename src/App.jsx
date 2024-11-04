@@ -174,7 +174,7 @@ function App() {
       </header>
       <section id="firstpage" ref={sectionRefs.firstpage} className="firstpage">
         <div>
-          <video autoPlay loop muted src="/videos/testvideo.mp4"></video>
+          <video autoPlay loop muted src="/videos/testvideo.mp4" preload="none"></video>
         </div>
         <h1 className="parallax-heading">Johannes Stenfeldt</h1>
       </section>
