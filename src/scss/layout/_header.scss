@@ -174,13 +174,25 @@ header.onFirstpage {
   -webkit-backdrop-filter: blur(0);
   transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease;
 
-  div {
+  div.myname {
     a {
       img.whitelogo {
         display: flex;
       }
       img.blacklogo {
         display: none;
+      }
+    }
+  }
+
+  div.navdiv {
+    nav {
+      a {
+        color: #e5e5e5;
+        transition: color 0.2s ease;
+      }
+      a:hover {
+        color: white;
       }
     }
   }
