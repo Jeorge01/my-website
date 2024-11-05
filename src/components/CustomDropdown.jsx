@@ -44,6 +44,7 @@ const CustomDropdown = ({ options, language, onChange }) => {
                 verticalAlign: "middle",
                 marginRight: "8px",
               }}
+              draggable="false"
             />
           )}
           {selectedOption.label}
@@ -59,6 +60,7 @@ const CustomDropdown = ({ options, language, onChange }) => {
             verticalAlign: "middle",
             marginRight: "8px",
           }}
+          draggable="false"
         />
       </div>
       {isOpen && (
@@ -71,7 +73,7 @@ const CustomDropdown = ({ options, language, onChange }) => {
             )
             .map((option, index) => (
               <div key={index} onClick={() => handleSelect(option)}>
-                <img src={option.image} alt={option.label} />
+                <img src={option.image} alt={option.label} draggable="false"/>
                 {option.label}
               </div>
             ))}
