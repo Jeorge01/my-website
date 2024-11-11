@@ -110,6 +110,7 @@ section.article {
             @include breakpoint("large") {
                 width: 100%;
                 height: 80%;
+                max-height: 800px;
             }
 
             img {
@@ -125,6 +126,21 @@ section.article {
             height: 100%;
             overflow: hidden;
             border-radius: 8px;
+
+            // @include breakpoint("small") {
+            //     width: 85%;
+            //     height: 250px;
+            // }
+
+            // @include breakpoint("medium") {
+            //     width: 85%;
+            //     height: 350px;
+            // }
+
+            @include breakpoint("large") {
+                
+                max-height: 800px;
+            }
 
             img {
                 object-fit: cover;
@@ -191,6 +207,7 @@ section.article {
             @include breakpoint("large") {
                 width: 100%;
                 height: 80%;
+                max-height: 800px;
             }
 
             img {
