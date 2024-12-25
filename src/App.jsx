@@ -11,8 +11,6 @@ function App() {
   const [firstPageActive, setFirstPageActive] = useState(false);
   const currentYear = new Date().getFullYear();
 
-  const myAge = useBirthdayCalculator();
-
   const sectionRefs = {
     firstpage: useRef(null),
     aboutmepage: useRef(null),
@@ -25,6 +23,8 @@ function App() {
     { label: "Swedish", image: "/icons/se.svg" },
     { label: "English", image: "/icons/gb.svg" },
   ];
+
+  const myAge = useBirthdayCalculator();
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
