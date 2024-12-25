@@ -3,12 +3,15 @@ import { Link } from "react-scroll";
 import SelectWithImages from "./components/CustomDropdown";
 import ParallaxScrollHandler from "./components/ParallaxScrollHandler.jsx";
 import SectionObserver from "./components/SectionObserver.jsx";
+import useBirthdayCalculator from "./components/BirthdayCalculator.jsx";
 
 function App() {
   const [language, setLanguage] = useState("english");
   const [activeSection, setActiveSection] = useState("firstpage");
   const [firstPageActive, setFirstPageActive] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  const myAge = useBirthdayCalculator();
 
   const sectionRefs = {
     firstpage: useRef(null),
@@ -22,24 +25,6 @@ function App() {
     { label: "Swedish", image: "/icons/se.svg" },
     { label: "English", image: "/icons/gb.svg" },
   ];
-
-  const myAge = (() => {
-    const today = new Date();
-    const birthdate = "2001-10-24";
-    const birthDate = new Date(birthdate);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDifference = today.getMonth() - birthDate.getMonth();
-
-    // Check if the birthday has occurred this year
-    if (
-      monthDifference < 0 ||
-      (monthDifference === 0 && today.getDate() < birthDate.getDate())
-    ) {
-      age--;
-    }
-
-    return age;
-  })();
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
