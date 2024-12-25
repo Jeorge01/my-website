@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import SelectWithImages from "./components/CustomDropdown";
+import ParallaxScrollHandler from "./components/ParallaxScrollHandler.jsx";
 
 function App() {
   const [language, setLanguage] = useState("english");
@@ -93,34 +94,6 @@ function App() {
     };
   }, [sectionRefs, firstPageActive]);
   
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const parallaxHeading = document.querySelector(".parallax-heading");
-
-      const parallaxSpeed = 0.35;
-
-      if (parallaxHeading) {
-        parallaxHeading.style.transform = `translate(-50%, calc(-85% + ${scrollPosition * parallaxSpeed}px))`;
-      }
-
-      // Determine the current active section based on scroll position
-      Object.keys(sectionRefs).forEach((sectionKey) => {
-        const section = sectionRefs[sectionKey].current;
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          // If the section is visible in the viewport
-          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-            setActiveSection(sectionKey);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [sectionRefs]);
 
   return (
     <>
@@ -359,6 +332,7 @@ function App() {
           <p>&copy; Jeorge01 {currentYear}</p>
         </footer>
       </section>
+      <ParallaxScrollHandler sectionRefs={sectionRefs} setActiveSection={setActiveSection} />
     </>
   );
 }
