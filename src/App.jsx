@@ -28,7 +28,6 @@ function App() {
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
-    console.log("Selected language:", newLanguage); // Optional: for debugging purposes
   };  
 
   return (
