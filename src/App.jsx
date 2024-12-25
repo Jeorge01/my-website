@@ -4,12 +4,14 @@ import SelectWithImages from "./components/CustomDropdown";
 import ParallaxScrollHandler from "./components/ParallaxScrollHandler.jsx";
 import SectionObserver from "./components/SectionObserver.jsx";
 import useBirthdayCalculator from "./components/BirthdayCalculator.jsx";
+import useCopyToClipboard from "./components/CopyToClipboard.jsx";
 
 function App() {
     const [language, setLanguage] = useState("english");
     const [activeSection, setActiveSection] = useState("firstpage");
     const [firstPageActive, setFirstPageActive] = useState(false);
     const currentYear = new Date().getFullYear();
+    const { copied, handleCopy } = useCopyToClipboard();
 
     const sectionRefs = {
         firstpage: useRef(null),
@@ -188,6 +190,16 @@ function App() {
                                 ? "bästa sättet att kontatka mig är via email"
                                 : "Best way to contact me is through email!"}
                         </p>
+                        <button onClick={() => handleCopy("johannesstenfeldt@gmail.com")}>
+                            {copied["johannesstenfeldt@gmail.com"] ? (
+                                "Copied!"
+                            ) : (
+                                <span>
+                                    johannesstenfeldt@mail.com
+                                    <img src="/icons/copy.svg" alt="Email Icon" />
+                                </span>
+                            )}
+                        </button>
                     </div>
                     <div className="link joelstudioscontainer">
                         <a href="mailto:team@joelstudios.com" target="_blank"></a>
@@ -198,6 +210,16 @@ function App() {
                                 ? "Kontakta mig och min arbetskamrat!"
                                 : "Contact me and my business parnter!"}
                         </p>
+                        <button onClick={() => handleCopy("team@joelstudios.com")}>
+                            {copied["team@joelstudios.com"] ? (
+                                "Copied!"
+                            ) : (
+                                <span>
+                                    team@joelstudios.com
+                                    <img src="/icons/copy.svg" alt="Email Icon" />
+                                </span>
+                            )}
+                        </button>
                     </div>
                     <div className="link githubcontainer">
                         <a href="https://github.com/Jeorge01" target="_blank"></a>
