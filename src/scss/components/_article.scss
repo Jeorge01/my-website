@@ -138,7 +138,6 @@ section.article {
             // }
 
             @include breakpoint("large") {
-                
                 max-height: 800px;
             }
 
@@ -463,7 +462,6 @@ section.contactmepage {
                 transition: background 0.3s ease, color 0.3s ease;
                 transition: width 0.3s ease, min-height 0.3s ease;
 
-
                 span {
                     display: flex;
                     justify-content: space-between;
@@ -480,8 +478,10 @@ section.contactmepage {
                 }
             }
             button:hover {
-                width: 280px;
-                min-height: 50px;
+                @include breakpoint("medium") {
+                    width: 280px;
+                    min-height: 50px;
+                }
             }
         }
     }
