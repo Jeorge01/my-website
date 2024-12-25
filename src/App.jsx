@@ -241,11 +241,6 @@ function App() {
                     </div>
                 </div>
                 <footer>
-                    <div>
-                        <p>Personal mail: johannesstenfeldt@gmail.com</p>
-                        <p>Business mail: team@joelstudios.com</p>
-                    </div>
-
                     <div className="copyright">
                         <p>
                             &copy;
@@ -255,7 +250,6 @@ function App() {
                             {currentYear}
                         </p>
                     </div>
-                    <div></div>
                 </footer>
             </section>
             <SectionObserver

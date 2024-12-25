@@ -29,25 +29,19 @@ footer {
         height: 80px;
       }
 
-      div {
+      div.copyright {
         display: flex;
-        gap: 40px;
-        flex: 3;
+        justify-content: center;
+        align-items: center;
         p {
             display: flex;
             gap: 5px;
             padding: 0 40px;
-            font-size: 0.825rem;
+            font-size: 1rem;
 
             a {
-                font-size: 0.825rem;
+                font-size: 1rem;
             }
         }
-      }
-
-      div.copyright {
-        flex: 1;
-        justify-content: center;
-        
       }
   }
