@@ -195,7 +195,7 @@ function App() {
                                 "Copied!"
                             ) : (
                                 <span>
-                                    johannesstenfeldt@mail.com
+                                    johannesstenfeldt@gmail.com
                                     <img src="/icons/copy.svg" alt="Email Icon" />
                                 </span>
                             )}
