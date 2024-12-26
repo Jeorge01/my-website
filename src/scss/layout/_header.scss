@@ -15,18 +15,21 @@ header {
 
     display: flex;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 18px;
 
     @include breakpoint("small") {
         position: absolute;
+        padding: 0 18px;
     }
 
     @include breakpoint("medium") {
         position: absolute;
+        padding: 0 40px;
     }
 
     @include breakpoint("large") {
         position: fixed;
+        padding: 0 40px;
     }
 
     div.myname {
