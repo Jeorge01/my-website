@@ -5,6 +5,7 @@ import ParallaxScrollHandler from "./components/ParallaxScrollHandler.jsx";
 import SectionObserver from "./components/SectionObserver.jsx";
 import useBirthdayCalculator from "./components/BirthdayCalculator.jsx";
 import useCopyToClipboard from "./components/CopyToClipboard.jsx";
+import DarkOrLightMode from "./components/DarkOrLightMode.jsx";
 
 function App() {
     const [language, setLanguage] = useState("english");
@@ -252,6 +253,7 @@ function App() {
                     </div>
                 </footer>
             </section>
+            <DarkOrLightMode />
             <SectionObserver
                 sectionRefs={sectionRefs}
                 firstPageActive={firstPageActive}
