@@ -1,8 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Add versioning or query string to favicon
 export default defineConfig({
   plugins: [react()],
-  base: '/',
-})
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'favicon.ico') {
+            return 'favicon.ico?v=1'; // Example of query string for cache-busting
+          }
+          return '[name].[hash].[ext]';  // For other assets
+        },
+      },
+    },
+  },
+});
