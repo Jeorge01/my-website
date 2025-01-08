@@ -9,3 +9,16 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
 }
 
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    letter-spacing: 1rem;
+    letter-spacing: 3px;
+  }
+}
+

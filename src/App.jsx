@@ -93,7 +93,7 @@ function App() {
                 <div>
                     <video autoPlay loop muted playsInline src="/videos/testvideo2.mp4" preload="auto"></video>
                 </div>
-                <h1 className="parallax-heading">Johannes Stenfeldt</h1>
+                <h1 className="parallax-heading">Johannes Stenfeldt<span>Junior Fullstack Developer | <span>Looking for Work</span></span></h1>
             </section>
             <section id="aboutmepage" ref={sectionRefs.aboutmepage} className="article aboutmepage">
                 <div className="imagesection">
@@ -179,7 +179,7 @@ function App() {
             </section>
             <section id="contactmepage" ref={sectionRefs.contactmepage} className="article contactmepage">
                 <div className="textcontainer">
-                    <h1>{language === "swedish" ? "Länkar" : "Links"}</h1>
+                    <h1 className="text-center">{language === "swedish" ? "Länkar" : "Links"}</h1>
                 </div>
                 <div className="linksdiv">
                     <div className="link emailcontainer">

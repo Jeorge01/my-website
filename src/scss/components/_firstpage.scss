@@ -25,6 +25,22 @@ section.firstpage {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
 
+    span {
+      display: block;
+      font-size: 0.825rem;
+      font-weight: 400;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+
+      span {
+        background-color: black;
+        display: inline-block;
+        color: white;
+        padding: 0 1rem;
+      }
+
+    }
+
     @include breakpoint("small") {
       white-space: wrap;
       transform: translate(-50%, -75%);

@@ -42,6 +42,7 @@ section.article {
         display: flex;
         flex-direction: column-reverse;
 
+
         @include breakpoint("small") {
             display: flex;
             flex-direction: column-reverse;
@@ -118,6 +119,13 @@ section.article {
                 height: 100%;
                 width: 100%;
                 border-radius: 8px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
             }
         }
 
@@ -224,7 +232,7 @@ section.article {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         padding: 7.5%;
         width: 100%;
 
