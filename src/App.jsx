@@ -193,7 +193,7 @@ function App() {
                     <div className="link emailcontainer">
                         <a href="mailto:johannesstenfeldt@gmail.com" target="_blank"></a>
                         <img src="/icons/mail-outline.svg" alt="" />
-                        <h3>Personal mail</h3>
+                        <h4>Personal mail</h4>
                         <p>
                             {language === "swedish"
                                 ? "bästa sättet att kontatka mig är via email"
@@ -213,7 +213,7 @@ function App() {
                     <div className="link joelstudioscontainer">
                         <a href="mailto:team@joelstudios.com" target="_blank"></a>
                         <img src="/icons/webblogosolidblackinside.svg" alt="" />
-                        <h3>Business mail</h3>
+                        <h4>Business mail</h4>
                         <p>
                             {language === "swedish"
                                 ? "Kontakta mig och min arbetskamrat!"
@@ -233,7 +233,7 @@ function App() {
                     <div className="link githubcontainer">
                         <a href="https://github.com/Jeorge01" target="_blank"></a>
                         <img src="/icons/logo-github.svg" alt="" />
-                        <h3>Github</h3>
+                        <h4>Github</h4>
                         <p>
                             {language === "swedish" ? "Har är länk till min Github!" : "Here is a link to my Github!"}
                         </p>
@@ -241,7 +241,7 @@ function App() {
                     <div className="link linkedincontainer">
                         <a href="https://www.linkedin.com/in/johannes-stenfeldt-976714314" target="_blank"></a>
                         <img src="/icons/logo-linkedin.svg" alt="" />
-                        <h3>LinkedIn</h3>
+                        <h4>LinkedIn</h4>
                         <p>
                             {language === "swedish"
                                 ? "Kolla in mitt LinkedIn konto!"
