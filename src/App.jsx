@@ -91,7 +91,10 @@ function App() {
             </header>
             <section id="firstpage" ref={sectionRefs.firstpage} className="firstpage">
                 <div>
-                    <video autoPlay loop muted playsInline src="/videos/testvideo2.mp4" preload="auto"></video>
+                    <video autoPlay loop muted playsInline preload="auto">
+                        <source src="/videos/testvideo2LQ.webm" />
+                        <source src="/videos/testvideo2.mp4" />
+                    </video>
                 </div>
                 <h1 className="parallax-heading">
                     Johannes Stenfeldt
@@ -106,7 +109,7 @@ function App() {
             <section id="aboutmepage" ref={sectionRefs.aboutmepage} className="article aboutmepage">
                 <div className="imagesection">
                     <div className="imagecontainer">
-                        <img src="/images/aboutmeimage.JPG" alt="Bild på Johannes" />
+                        <img src="/images/aboutmeimageLQ.JPG" alt="Bild på Johannes" />
                     </div>
                 </div>
                 <div className="textcontainer">
@@ -162,14 +165,14 @@ function App() {
                 </div>
                 <div className="imagesection2">
                     <div className="imagecontainer">
-                        <img src="/images/glimakrafolkhogskola.jpg" alt="Bild på Glimåkra folkhögskola" />
+                        <img src="/images/glimakrafolkhogskolaLQ.jpg" alt="Bild på Glimåkra folkhögskola" />
                     </div>
                 </div>
             </section>
             <section id="examensarbetepage" ref={sectionRefs.examensarbetepage} className="article examensarbetepage">
                 <div className="imagesection">
                     <div className="imagecontainer2">
-                        <img src="/images/application-on-phone.png" alt="Bild på Johannes" />
+                        <img src="/images/application-on-phoneLQ.png" alt="Bild på Johannes" />
                     </div>
                 </div>
                 <div className="textcontainer">
