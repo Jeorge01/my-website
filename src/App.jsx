@@ -93,7 +93,15 @@ function App() {
                 <div>
                     <video autoPlay loop muted playsInline src="/videos/testvideo2.mp4" preload="auto"></video>
                 </div>
-                <h1 className="parallax-heading">Johannes Stenfeldt</h1>
+                <h1 className="parallax-heading">
+                    Johannes Stenfeldt
+                    <span>
+                        {language === "swedish" ? "Junior Fullstack-utvecklare | " : "Junior Fullstack Developer | "} 
+                        <span>
+                            {language === "swedish" ? "Söker jobb" : "Looking for Work"}
+                        </span>
+                    </span>
+                </h1>
             </section>
             <section id="aboutmepage" ref={sectionRefs.aboutmepage} className="article aboutmepage">
                 <div className="imagesection">

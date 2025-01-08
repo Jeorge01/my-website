@@ -42,6 +42,18 @@ section.firstpage {
       transform: translate(-50%, -85%);
       font-size: 6rem;
     }
+
+    span {
+      display: block;
+      font-size: 0.825rem;
+      font-weight: 400;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+
+      span {
+        display: inline;
+      }
+    }
   }
   div {
     top: 0;
