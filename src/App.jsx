@@ -6,6 +6,7 @@ import SectionObserver from "./components/SectionObserver.jsx";
 import useBirthdayCalculator from "./components/BirthdayCalculator.jsx";
 import useCopyToClipboard from "./components/CopyToClipboard.jsx";
 import DarkOrLightMode from "./components/DarkOrLightMode.jsx";
+import useVideoFocusControl from "./components/ResumeBackgroundVideo";
 
 function App() {
     const [language, setLanguage] = useState("english");
@@ -13,6 +14,8 @@ function App() {
     const [firstPageActive, setFirstPageActive] = useState(false);
     const currentYear = new Date().getFullYear();
     const { copied, handleCopy } = useCopyToClipboard();
+    const videoRef = useRef(null);
+    useVideoFocusControl(videoRef);
 
     const sectionRefs = {
         firstpage: useRef(null),
@@ -91,7 +94,7 @@ function App() {
             </header>
             <section id="firstpage" ref={sectionRefs.firstpage} className="firstpage">
                 <div>
-                    <video autoPlay loop muted playsInline preload="auto">
+                    <video ref={videoRef} autoPlay loop muted playsInline preload="auto">
                         <source src="/videos/testvideo2LQ.webm" />
                         <source src="/videos/testvideo2.mp4" />
                     </video>
