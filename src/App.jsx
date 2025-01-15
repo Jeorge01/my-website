@@ -116,7 +116,7 @@ function App() {
                     </div>
                 </div>
                 <div className="textcontainer">
-                    <h1>{language === "swedish" ? "Om mig" : "About me"}</h1>
+                    <h2>{language === "swedish" ? "Om mig" : "About me"}</h2>
                     <p>
                         {language === "swedish"
                             ? `Mitt namn är Johannes. Jag är ${myAge} år gammal och har utbildat mig
@@ -134,7 +134,7 @@ function App() {
             </section>
             <section id="educationpage" ref={sectionRefs.educationpage} className="article educationpage">
                 <div className="textcontainer">
-                    <h1>{language === "swedish" ? "Utbildning" : "Education"}</h1>
+                    <h2>{language === "swedish" ? "Utbildning" : "Education"}</h2>
                     <p>
                         {language === "swedish"
                             ? `Jag gick en tvåårig utbildning som tog plats på Glimåkra folkhögskola. 
@@ -179,7 +179,7 @@ function App() {
                     </div>
                 </div>
                 <div className="textcontainer">
-                    <h1>{language === "swedish" ? "Examensarbete" : "Final project"}</h1>
+                    <h2>{language === "swedish" ? "Examensarbete" : "Final project"}</h2>
                     <p>
                         {language === "swedish"
                             ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett api till ÖMC som ska hjälpa intruktörer att se och ansöka om att hålla i kurser. 
@@ -193,7 +193,7 @@ function App() {
             </section>
             <section id="contactmepage" ref={sectionRefs.contactmepage} className="article contactmepage">
                 <div className="textcontainer">
-                    <h1>{language === "swedish" ? "Länkar" : "Links"}</h1>
+                    <h2>{language === "swedish" ? "Länkar" : "Links"}</h2>
                 </div>
                 <div className="linksdiv">
                     <div className="link emailcontainer">
