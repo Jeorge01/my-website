@@ -148,7 +148,7 @@ function App() {
             The course consisted of twelve modules.`}
                     </p>
                     <div className="modules">
-                        <ul>
+                        {/* <ul>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Javascript</li>
@@ -163,6 +163,33 @@ function App() {
                             <li>Fullstack PHP</li>
                             <li>{language === "swedish" ? "Wordpress gruppprojekt" : "Wordpress grouproject"}</li>
                             <li>{language === "swedish" ? "Examensarbete" : "Final project"}</li>
+                        </ul> */}
+                        <h4>{language === "swedish" ? "Färdigheter" : "Skills"}</h4>
+                        <ul>
+                            <li>
+                                <span>React</span>
+                                <div className="bar">
+                                    <div className="baramount-react"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Css</span>
+                                <div className="bar">
+                                    <div className="baramount-css"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>PHP</span>
+                                <div className="bar">
+                                    <div className="baramount-php"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>WP</span>
+                                <div className="bar">
+                                    <div className="baramount-wp"></div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
