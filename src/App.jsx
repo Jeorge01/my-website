@@ -44,10 +44,22 @@ function App() {
                         to="firstpage"
                         smooth={true}
                         duration={500}
-                        className={activeSection === "firstpage" ? "active" : ""}
+                        className={
+                            activeSection === "firstpage" ? "active" : ""
+                        }
                     >
-                        <img src="/icons/webblogosolidblack.svg" className="blacklogo" alt="logo" draggable="false" />
-                        <img src="/icons/webblogosolidwhite.svg" className="whitelogo" alt="logo" draggable="false" />
+                        <img
+                            src="/icons/webblogosolidblack.svg"
+                            className="blacklogo"
+                            alt="logo"
+                            draggable="false"
+                        />
+                        <img
+                            src="/icons/webblogosolidwhite.svg"
+                            className="whitelogo"
+                            alt="logo"
+                            draggable="false"
+                        />
                     </Link>
 
                     <h2></h2>
@@ -58,7 +70,9 @@ function App() {
                             to="aboutmepage"
                             smooth={true}
                             duration={500}
-                            className={activeSection === "aboutmepage" ? "active" : ""}
+                            className={
+                                activeSection === "aboutmepage" ? "active" : ""
+                            }
                         >
                             {language === "swedish" ? "Om mig" : "About me"}
                         </Link>
@@ -66,35 +80,68 @@ function App() {
                             to="educationpage"
                             smooth={true}
                             duration={500}
-                            className={activeSection === "educationpage" ? "active" : ""}
+                            className={
+                                activeSection === "educationpage"
+                                    ? "active"
+                                    : ""
+                            }
                         >
-                            {language === "swedish" ? "Utbildning" : "Education"}
+                            {language === "swedish"
+                                ? "Utbildning"
+                                : "Education"}
                         </Link>
                         <Link
                             to="examensarbetepage"
                             smooth={true}
                             duration={500}
-                            className={activeSection === "examensarbetepage" ? "active" : ""}
+                            className={
+                                activeSection === "examensarbetepage"
+                                    ? "active"
+                                    : ""
+                            }
                         >
-                            {language === "swedish" ? "Examensarbete" : "Final project"}
+                            {language === "swedish"
+                                ? "Examensarbete"
+                                : "Final project"}
                         </Link>
                         <Link
                             to="contactmepage"
                             smooth={true}
                             duration={500}
-                            className={activeSection === "contactmepage" ? "active" : ""}
+                            className={
+                                activeSection === "contactmepage"
+                                    ? "active"
+                                    : ""
+                            }
                         >
-                            {language === "swedish" ? "Kontakta mig" : "Contact me"}
+                            {language === "swedish"
+                                ? "Kontakta mig"
+                                : "Contact me"}
                         </Link>
                     </nav>
                 </div>
                 <div className="selectlanguage">
-                    <SelectWithImages options={options} language={language} onChange={handleLanguageChange} />
+                    <SelectWithImages
+                        options={options}
+                        language={language}
+                        onChange={handleLanguageChange}
+                    />
                 </div>
             </header>
-            <section id="firstpage" ref={sectionRefs.firstpage} className="firstpage">
+            <section
+                id="firstpage"
+                ref={sectionRefs.firstpage}
+                className="firstpage"
+            >
                 <div>
-                    <video ref={videoRef} autoPlay loop muted playsInline preload="auto">
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="auto"
+                    >
                         <source src="/videos/testvideo2LQ.webm" />
                         <source src="/videos/testvideo2.mp4" />
                     </video>
@@ -102,17 +149,28 @@ function App() {
                 <h1 className="parallax-heading">
                     Johannes Stenfeldt
                     <span>
-                        {language === "swedish" ? "Junior Fullstack-utvecklare | " : "Junior Fullstack Developer | "} 
+                        {language === "swedish"
+                            ? "Junior Fullstack-utvecklare | "
+                            : "Junior Fullstack Developer | "}
                         <span>
-                            {language === "swedish" ? "Söker jobb" : "Looking for Work"}
+                            {language === "swedish"
+                                ? "Söker jobb"
+                                : "Looking for Work"}
                         </span>
                     </span>
                 </h1>
             </section>
-            <section id="aboutmepage" ref={sectionRefs.aboutmepage} className="article aboutmepage">
+            <section
+                id="aboutmepage"
+                ref={sectionRefs.aboutmepage}
+                className="article aboutmepage"
+            >
                 <div className="imagesection">
                     <div className="imagecontainer">
-                        <img src="/images/aboutmeimageLQ.JPG" alt="Bild på Johannes" />
+                        <img
+                            src="/images/aboutmeimageLQ.JPG"
+                            alt="Bild på Johannes"
+                        />
                     </div>
                 </div>
                 <div className="textcontainer">
@@ -132,9 +190,15 @@ function App() {
                     </p>
                 </div>
             </section>
-            <section id="educationpage" ref={sectionRefs.educationpage} className="article educationpage">
+            <section
+                id="educationpage"
+                ref={sectionRefs.educationpage}
+                className="article educationpage"
+            >
                 <div className="textcontainer">
-                    <h2>{language === "swedish" ? "Utbildning" : "Education"}</h2>
+                    <h2>
+                        {language === "swedish" ? "Utbildning" : "Education"}
+                    </h2>
                     <p>
                         {language === "swedish"
                             ? `Jag gick en tvåårig utbildning som tog plats på Glimåkra folkhögskola. 
@@ -147,8 +211,9 @@ function App() {
             and at the end of each module we had a case where we had to build a project using the techniques we had learned. 
             The course consisted of twelve modules.`}
                     </p>
-                    <div className="modules">
-                        {/* <ul>
+                    <div>
+                        <div className="modules">
+                            {/* <ul>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Javascript</li>
@@ -164,49 +229,64 @@ function App() {
                             <li>{language === "swedish" ? "Wordpress gruppprojekt" : "Wordpress grouproject"}</li>
                             <li>{language === "swedish" ? "Examensarbete" : "Final project"}</li>
                         </ul> */}
-                        <h4>{language === "swedish" ? "Färdigheter" : "Skills"}</h4>
-                        <ul>
-                            <li>
-                                <span>React</span>
-                                <div className="bar">
-                                    <div className="baramount-react"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Css</span>
-                                <div className="bar">
-                                    <div className="baramount-css"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>PHP</span>
-                                <div className="bar">
-                                    <div className="baramount-php"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span>WP</span>
-                                <div className="bar">
-                                    <div className="baramount-wp"></div>
-                                </div>
-                            </li>
-                        </ul>
+                            {/* <h4>{language === "swedish" ? "Färdigheter" : "Skills"}</h4> */}
+                            <ul>
+                                <li>
+                                    <span>React</span>
+                                    <div className="bar">
+                                        <div className="baramount react"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Css</span>
+                                    <div className="bar">
+                                        <div className="baramount css"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>PHP</span>
+                                    <div className="bar">
+                                        <div className="baramount php"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>WordPress</span>
+                                    <div className="bar">
+                                        <div className="baramount wordpress"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="imagesection2">
                     <div className="imagecontainer">
-                        <img src="/images/glimakrafolkhogskolaLQ.jpg" alt="Bild på Glimåkra folkhögskola" />
+                        <img
+                            src="/images/glimakrafolkhogskolaLQ.jpg"
+                            alt="Bild på Glimåkra folkhögskola"
+                        />
                     </div>
                 </div>
             </section>
-            <section id="examensarbetepage" ref={sectionRefs.examensarbetepage} className="article examensarbetepage">
+            <section
+                id="examensarbetepage"
+                ref={sectionRefs.examensarbetepage}
+                className="article examensarbetepage"
+            >
                 <div className="imagesection">
                     <div className="imagecontainer2">
-                        <img src="/images/application-on-phoneLQ.png" alt="Bild på Johannes" />
+                        <img
+                            src="/images/application-on-phoneLQ.png"
+                            alt="Bild på Johannes"
+                        />
                     </div>
                 </div>
                 <div className="textcontainer">
-                    <h2>{language === "swedish" ? "Examensarbete" : "Final project"}</h2>
+                    <h2>
+                        {language === "swedish"
+                            ? "Examensarbete"
+                            : "Final project"}
+                    </h2>
                     <p>
                         {language === "swedish"
                             ? `Som examensarbete har jag tillsammans med min kompis Elliot Borgkvist byggt ett api till ÖMC som ska hjälpa intruktörer att se och ansöka om att hålla i kurser. 
@@ -218,13 +298,20 @@ function App() {
                     </p>
                 </div>
             </section>
-            <section id="contactmepage" ref={sectionRefs.contactmepage} className="article contactmepage">
+            <section
+                id="contactmepage"
+                ref={sectionRefs.contactmepage}
+                className="article contactmepage"
+            >
                 <div className="textcontainer">
                     <h2>{language === "swedish" ? "Länkar" : "Links"}</h2>
                 </div>
                 <div className="linksdiv">
                     <div className="link emailcontainer">
-                        <a href="mailto:johannesstenfeldt@gmail.com" target="_blank"></a>
+                        <a
+                            href="mailto:johannesstenfeldt@gmail.com"
+                            target="_blank"
+                        ></a>
                         <img src="/icons/mail-outline.svg" alt="" />
                         <h4>Personal mail</h4>
                         <p>
@@ -232,19 +319,29 @@ function App() {
                                 ? "bästa sättet att kontatka mig är via email"
                                 : "Best way to contact me is through email!"}
                         </p>
-                        <button onClick={() => handleCopy("johannesstenfeldt@gmail.com")}>
+                        <button
+                            onClick={() =>
+                                handleCopy("johannesstenfeldt@gmail.com")
+                            }
+                        >
                             {copied["johannesstenfeldt@gmail.com"] ? (
                                 "Copied!"
                             ) : (
                                 <span>
                                     johannesstenfeldt@gmail.com
-                                    <img src="/icons/copy.svg" alt="Email Icon" />
+                                    <img
+                                        src="/icons/copy.svg"
+                                        alt="Email Icon"
+                                    />
                                 </span>
                             )}
                         </button>
                     </div>
                     <div className="link joelstudioscontainer">
-                        <a href="mailto:team@joelstudios.com" target="_blank"></a>
+                        <a
+                            href="mailto:team@joelstudios.com"
+                            target="_blank"
+                        ></a>
                         <img src="/icons/webblogosolidblackinside.svg" alt="" />
                         <h4>Business mail</h4>
                         <p>
@@ -252,27 +349,40 @@ function App() {
                                 ? "Kontakta mig och min arbetskamrat!"
                                 : "Contact me and my business parnter!"}
                         </p>
-                        <button onClick={() => handleCopy("team@joelstudios.com")}>
+                        <button
+                            onClick={() => handleCopy("team@joelstudios.com")}
+                        >
                             {copied["team@joelstudios.com"] ? (
                                 "Copied!"
                             ) : (
                                 <span>
                                     team@joelstudios.com
-                                    <img src="/icons/copy.svg" alt="Email Icon" />
+                                    <img
+                                        src="/icons/copy.svg"
+                                        alt="Email Icon"
+                                    />
                                 </span>
                             )}
                         </button>
                     </div>
                     <div className="link githubcontainer">
-                        <a href="https://github.com/Jeorge01" target="_blank"></a>
+                        <a
+                            href="https://github.com/Jeorge01"
+                            target="_blank"
+                        ></a>
                         <img src="/icons/logo-github.svg" alt="" />
                         <h4>Github</h4>
                         <p>
-                            {language === "swedish" ? "Har är länk till min Github!" : "Here is a link to my Github!"}
+                            {language === "swedish"
+                                ? "Har är länk till min Github!"
+                                : "Here is a link to my Github!"}
                         </p>
                     </div>
                     <div className="link linkedincontainer">
-                        <a href="https://www.linkedin.com/in/johannes-stenfeldt-976714314" target="_blank"></a>
+                        <a
+                            href="https://www.linkedin.com/in/johannes-stenfeldt-976714314"
+                            target="_blank"
+                        ></a>
                         <img src="/icons/logo-linkedin.svg" alt="" />
                         <h4>LinkedIn</h4>
                         <p>
@@ -286,7 +396,10 @@ function App() {
                     <div className="copyright">
                         <p>
                             &copy;
-                            <a href="https://github.com/Jeorge01" target="_blank">
+                            <a
+                                href="https://github.com/Jeorge01"
+                                target="_blank"
+                            >
                                 Jeorge01
                             </a>
                             {currentYear}
@@ -301,7 +414,10 @@ function App() {
                 setFirstPageActive={setFirstPageActive}
                 setActiveSection={setActiveSection}
             />
-            <ParallaxScrollHandler sectionRefs={sectionRefs} setActiveSection={setActiveSection} />
+            <ParallaxScrollHandler
+                sectionRefs={sectionRefs}
+                setActiveSection={setActiveSection}
+            />
         </>
     );
 }
